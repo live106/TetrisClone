@@ -49,18 +49,18 @@ public class NetWorkMgr
 
     void Awake()
     {
-        ResourceManager.Instance().Load("Tables/IPConfige", delegate(object parameter, ResourceManager.WWWResourceData rd)
-        {
-            if (rd != null && rd.text != null)
-            {
-                string[] strs = rd.text.Split('|');
-                if (strs.Length == 2)
-                {
-                    m_strHost = strs[0];
-                    m_nPort = int.Parse(strs[1]);
-                }
-            }
-        }, null);
+//        ResourceManager.Instance().Load("Tables/IPConfige", delegate(object parameter, ResourceManager.WWWResourceData rd)
+//        {
+//            if (rd != null && rd.text != null)
+//            {
+//                string[] strs = rd.text.Split('|');
+//                if (strs.Length == 2)
+//                {
+//                    m_strHost = strs[0];
+//                    m_nPort = int.Parse(strs[1]);
+//                }
+//            }
+//        }, null);
     }
 
     void InitThread()
@@ -269,9 +269,9 @@ public class NetWorkMgr
 
     public void RegisterAllMessage()
     {
-        MsgReceiveAuthServerPublicKey.RegisterMessage();
-        MsgReceiveClientPublicKey.RegisterMessage();
-        MsgReceiveUserLogin.RegisterMessage();
-        MsgReceiveGameServerConnect.RegisterMessage();
+//        MsgReceiveAuthServerPublicKey.RegisterMessage();
+//        MsgReceiveClientPublicKey.RegisterMessage();
+//        MsgReceiveUserLogin.RegisterMessage();
+//        MsgReceiveGameServerConnect.RegisterMessage();
     }
 }
